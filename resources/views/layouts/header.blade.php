@@ -12,11 +12,11 @@
 
                     <span class="logo-lg fw-bold"
                         style="
-            font-size: 22px;
-            letter-spacing: 1px;
-            color: #00c853;
-        ">
-                        Green <span style="color:#2e7d32;">Universe</span>
+                                font-size: 22px;
+                                letter-spacing: 1px;
+                                color: #00c853;
+                            ">
+                        Admin <span style="color:#2e7d32;"></span>
                     </span>
 
                 </a>

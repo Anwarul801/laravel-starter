@@ -3,7 +3,7 @@
     @Author: Anwarul
     @Date: 2025-11-17 17:12:23
  @LastEditors: Anwarul
- @LastEditTime: 2026-04-08 12:26:18
+ @LastEditTime: 2026-04-21 15:36:42
     @Description: Innova IT
     --}}
     <div data-simplebar class="h-100">
@@ -49,53 +49,6 @@
                         </li>
                     @endcanany
 
-                    {{-- Course Management (without Enrolled Student & Student Review) --}}
-                    @canany(['course.index', 'course_categories.index', 'course_comment.index', 'quiz_question.index'])
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect">
-                                <i class="ri-book-open-line"></i>
-                                <span>Courses</span>
-                                <i class="float-right has-arrow"></i>
-                            </a>
-                            <ul class="sub-menu ml-3" aria-expanded="false">
-                                @can('course.index')
-                                    <li><a href="{{ route('course.index') }}"><i class="ri-booklet-line"></i> Course List</a></li>
-                                @endcan
-                                @can('course_categories.index')
-                                    <li><a href="{{ route('course_categories.index') }}"><i class="ri-price-tag-3-line"></i> Course
-                                            Categories</a></li>
-                                @endcan
-                                @can('course_comment.index')
-                                    <li><a href="{{ route('course_comment.index') }}"><i class="ri-chat-3-line"></i> Course
-                                            Comments</a></li>
-                                @endcan
-                                @can('quiz_question.index')
-                                    <li><a href="{{ route('quiz_question.index') }}"><i class="ri-question-line"></i> Quiz Question
-                                            List</a></li>
-                                @endcan
-                            </ul>
-                        </li>
-                    @endcanany
-
-                    {{-- Enrolled Student (separate) --}}
-                    @can('enrolled_student.index')
-                        <li>
-                            <a href="{{ route('enrolled_student.index') }}" class="waves-effect">
-                                <i class="ri-group-line"></i>
-                                <span>Enrolled Student</span>
-                            </a>
-                        </li>
-                    @endcan
-
-                    {{-- Student Review (separate) --}}
-                    @can('student_review.index')
-                        <li>
-                            <a href="{{ route('student_review.index') }}" class="waves-effect">
-                                <i class="ri-star-line"></i>
-                                <span>Student Review</span>
-                            </a>
-                        </li>
-                    @endcan
 
                     {{-- Transaction Management --}}
                     @canany(['transaction.index'])
@@ -120,32 +73,7 @@
                         </li>
                     @endcanany
 
-                       @canany(['affiliate.index', 'wallet_history.index'])
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect">
-                                <i class="ri-book-line"></i>
-                                <span>Affiliate</span>
-                                <i class="float-right has-arrow"></i>
-                            </a>
-                            <ul class="sub-menu ml-3" aria-expanded="false">
-                                @can('affiliate.index')
-                                    <li><a href="{{ route('affiliate.index') }}"><i class="ri-book-mark-line"></i> Affiliate List</a></li>
-                                @endcan
-                                @can('wallet_history.index')
-                                    <li><a href="{{ route('wallet_history.index') }}"><i class="ri-file-list-line"></i> Wallet History</a></li>
-                                @endcan
-                                @can('withdraw.index')
-                                    <li><a href="{{ route('withdraw.index') }}?status=Pending"><i class="ri-file-list-line"></i> Withdraw Requests</a></li>
-                                @endcan
-                                @can('withdraw.index')
-                                    <li><a href="{{ route('withdraw.index') }}?status=Approved"><i class="ri-file-list-line"></i> Approved Withdraws</a></li>
-                                @endcan
-                                @can('withdraw.index')
-                                    <li><a href="{{ route('withdraw.index') }}?status=Rejected"><i class="ri-file-list-line"></i> Rejected Withdraws</a></li>
-                                @endcan
-                            </ul>
-                        </li>
-                    @endcanany
+
 
                     {{-- General Settings (Sliders, Faqs, Important Link) --}}
                     @canany(['slider.index', 'faq.index', 'important_link.index'])
@@ -208,28 +136,7 @@
                         </li>
                     @endcanany
 
-                    {{-- Teachers --}}
-                    @can(['teacher.index'])
-                        <li>
-                            <a href="{{ route('teacher.index') }}" class="waves-effect">
-                                <i class="ri-user-3-line"></i>
-                                <span>Teachers</span>
-                            </a>
-                        </li>
-                    @endcan
 
-                    {{-- System Settings --}}
-
-
-                    {{-- Job Circular --}}
-                    {{-- @can(['job_circular.index'])
-                        <li>
-                            <a href="{{ route('job_circular.index') }}" class="waves-effect">
-                                <i class="ri-briefcase-line"></i>
-                                <span>Job Circular</span>
-                            </a>
-                        </li>
-                    @endcan --}}
 
                     {{-- Contact Messages --}}
                     @can(['contact_message.index'])
@@ -237,6 +144,14 @@
                             <a href="{{ route('contact_message.index') }}" class="waves-effect">
                                 <i class="ri-mail-line"></i>
                                 <span>Contact Messages</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can(['setting.index'])
+                        <li>
+                            <a href="{{ route('setting.index') }}" class="waves-effect">
+                                <i class="ri-settings-line"></i>
+                                <span>System Settings</span>
                             </a>
                         </li>
                     @endcan

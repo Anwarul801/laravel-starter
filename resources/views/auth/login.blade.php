@@ -5,10 +5,10 @@
 --}}
 <html lang="en">
 <head>
-    <title>Green Universe  Login</title>
+    <title>Admin  Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta charset="UTF-8">
-    <meta name="description" content="Secure access to Green Universe Dashboard">
+    <meta name="description" content="Secure access to Admin Dashboard">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.ico') }}">
@@ -335,7 +335,7 @@
         <div class="brand-logo">
             <i class="fas fa-leaf"></i>
         </div>
-        <h1>Green Universe</h1>
+        <h1>Admin</h1>
         <p>Your sustainable ecosystem gateway</p>
     </div>
 
