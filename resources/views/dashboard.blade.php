@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -391,3 +393,8 @@
                                 </div><!-- end card -->
                             </div><!-- end col -->
                         </div>
+@endsection
+
+@push('footer_script')
+<script src="{{ asset('backend') }}/js/pages/dashboard.init.js"></script>
+@endpush

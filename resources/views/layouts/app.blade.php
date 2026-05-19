@@ -111,11 +111,8 @@
     <script src="{{ asset('backend') }}/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="{{ asset('backend') }}/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
-    <script src="{{ asset('backend') }}/js/pages/dashboard.init.js"></script>
-
     <script src="{{ asset('backend') }}/libs/tinymce/tinymce.min.js"></script>
     <script src="{{ asset('backend') }}/js/pages/form-editor.init.js"></script>
-    <script src="{{ asset('backend') }}/js/pages/form-advanced.init.js"></script>
     <!-- App js -->
     <script src="{{ asset('backend') }}/js/app.js"></script>
     <script src="{{ asset('backend') }}/js/custom.js"></script>
