@@ -98,7 +98,6 @@
                             <th>Status</th>
                             <th>Join</th>
                             <th class="text-center">Action</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,27 +107,7 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->phone }}</td>
-                                {{--
-
-                                <td>
-                                    @if (!empty($user->phone))
-                                        <strong>Phone:</strong> {{ $user->phone }}<br>
-                                    @endif
-
-                                    @if (!empty($user->email))
-                                        <strong>Email:</strong> {{ $user->email }}
-                                    @endif
-                                </td>
-                                <td>
-                                    @if ($user->status == 'Active')
-                                        <span class="badge bg-success">Active</span>
-                                    @else
-                                        <span class="badge bg-danger">Inactive</span>
-                                    @endif
-                                </td>
-                                {{--
-                                <td>{{ $user->devices->count() ?? '' }} - <a href="{{ route('users.show', $user->id) }}"
-                                        class="btn btn-warning btn-sm">Show</a></td> --}}
+                               
                                 <td>
                                     {{ $user->created_at->format('d M Y') }} <br>
                                     {{ $user->created_at->format('h:i A') }}
@@ -144,13 +123,10 @@
                                         <div class="dropdown-menu">
                                             <a href="{{ route('users.show', $user->id) }}" class="dropdown-item">Show</a>
                                             <a href="{{ route('users.edit', $user->id) }}" class="dropdown-item">Edit</a>
-                                            <a href="{{ route('users.index') }}?became_affiliate={{ $user->id }}" class="dropdown-item">Became Affiliate</a>
                                             <button class="dropdown-item text-danger deleteBtn"
                                                 data-id="{{ $user->id }}">
                                                 {{ __('Delete') }}
                                             </button>
-
-
                                             <form id="delete-form-{{ $user->id }}"
                                                 action="{{ route('users.destroy', $user->id) }}" method="POST"
                                                 class="d-inline">
@@ -158,14 +134,6 @@
                                             </form>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="{{ route('users.login-as', $user->id) }}" class="btn btn-primary"
-                                        onclick="return confirm('{{ $user->name }} হিসেবে login করবেন?')">
-                                        <i class="mdi mdi-login"></i> Login Frontend
-                                    </a>
-
                                 </td>
                             </tr>
                         @endforeach
